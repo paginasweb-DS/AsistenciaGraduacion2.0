@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graduación</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<!-- Música -->
+<audio id="musica" loop>
+  <source src="assets/musica/musica.mp3" type="audio/mpeg">
+</audio>
+
+<button id="btnMusica" class="btn-musica">🔊</button>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>MI GRADUACIÓN</h1>
+    <h2>Promoción 2024-2026</h2>
+    <br>
+    <p class="frase">"Un tanque puede ser fuerte, pero una tripulación unida es invencible."</p>
+</section>
+
+<!-- DATOS -->
+<section class="datos">
+    <h2 class="nombre">Cruz Herrera Alex Gustavo</h2>
+    <p class="cargo">SOLDADO "CABALLERÍA BLINDADA"</p>
+
+    <!-- CAJA PERSONALIZADA -->
+    <div class="pase-box">
+        <p id="mensajePase"></p>
+    </div>
+
+    <div class="fecha-box">
+        <p>AGOSTO</p>
+        <div class="dia">15</div>
+        <p>SÁBADO - 2026</p>
+        <p class="hora">19H30</p>
+    </div>
+
+    <button class="btn" onclick="abrirMaps()">Ver Ubicación</button>
+</section>
+
+<!-- CONTADOR -->
+<section class="contador-section">
+    <h3>Cuenta Regresiva</h3>
+    <div class="contador">
+        <div><span id="dias">00</span><small>Días</small></div>
+        <div><span id="horas">00</span><small>Horas</small></div>
+        <div><span id="minutos">00</span><small>Min</small></div>
+        <div><span id="segundos">00</span><small>Seg</small></div>
+    </div>
+</section>
+
+<!-- RSVP -->
+<section class="rsvp">
+    <h2>Confirmar Asistencia</h2>
+
+    <form id="rsvpForm">
+        <input type="text" id="nombreInvitado" placeholder="Nombre Completo" required>
+
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="asistencia" value="Sí asistiré" required>
+                Sí asistiré
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="asistencia" value="No podré asistir">
+                No podré asistir
+            </label>
+        </div>
+
+        <textarea id="mensaje" placeholder="Mensaje (opcional)"></textarea>
+
+        <button type="submit" class="btn">Confirmar</button>
+    </form>
+
+    <br>
+    <p class="subtitulo">"Firme en la misión, leal a la patria."</p>
+</section>
+
+<footer>
+    <p>⚓ ¡Te esperamos!</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
