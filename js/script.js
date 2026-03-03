@@ -9,18 +9,19 @@ const invitados = {
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
-const mensajePase = document.getElementById("mensajePase");
+const nombreFamilia = document.getElementById("nombreFamilia");
+const cantidadPases = document.getElementById("cantidadPases");
 
 if(id && invitados[id]){
-    mensajePase.innerText =
-    `Usted ${invitados[id].nombre} tiene pase para ${invitados[id].pases} personas en su honor.`;
+    nombreFamilia.innerText = `Usted ${invitados[id].nombre} tiene pase para:`;
+    cantidadPases.innerText = invitados[id].pases;
 } else {
-    mensajePase.innerText =
-    "Invitación Personal e Intransferible";
+    nombreFamilia.innerText = "Invitación Personal e Intransferible";
+    cantidadPases.innerText = "-";
 }
 
 // ===== CUENTA REGRESIVA =====
-const fechaEvento = new Date("August 20, 2026 19:30:00").getTime();
+/*const fechaEvento = new Date("August 20, 2026 19:30:00").getTime();
 
 setInterval(()=>{
     const ahora = new Date().getTime();
@@ -32,7 +33,7 @@ setInterval(()=>{
         document.getElementById("minutos").innerText = Math.floor((diferencia%(1000*60*60))/(1000*60));
         document.getElementById("segundos").innerText = Math.floor((diferencia%(1000*60))/1000);
     }
-},1000);
+},1000);*/
 
 
 // ===== WHATSAPP =====
